@@ -1,0 +1,16 @@
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\bin\Debug\netcoreapp2.2\TwitterWeb.API.deps.json
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\bin\Debug\netcoreapp2.2\TwitterWeb.API.runtimeconfig.json
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\bin\Debug\netcoreapp2.2\TwitterWeb.API.runtimeconfig.dev.json
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\bin\Debug\netcoreapp2.2\TwitterWeb.API.dll
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\obj\Debug\netcoreapp2.2\TwitterWeb.API.csprojAssemblyReference.cache
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\obj\Debug\netcoreapp2.2\TwitterWeb.API.RazorAssemblyInfo.cache
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\obj\Debug\netcoreapp2.2\TwitterWeb.API.RazorAssemblyInfo.cs
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\obj\Debug\netcoreapp2.2\TwitterWeb.API.AssemblyInfoInputs.cache
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\obj\Debug\netcoreapp2.2\TwitterWeb.API.AssemblyInfo.cs
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\obj\Debug\netcoreapp2.2\TwitterWeb.API.RazorTargetAssemblyInfo.cache
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\bin\Debug\netcoreapp2.2\TwitterWeb.API.pdb
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\obj\Debug\netcoreapp2.2\TwitterWeb.API.dll
+C:\Users\Güney Balcı\Desktop\TwitterApplication\TwitterWeb.API\TwitterWeb.API\obj\Debug\netcoreapp2.2\TwitterWeb.API.pdb

@@ -1,0 +1,91 @@
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .leftColText {
+    display: none;
+  }
+
+  .leftColButton .btn-primary {
+    display: block;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    font-size: 5px;
+    margin-left: 9%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .leftColText {
+    display: none;
+  }
+
+  .leftColButton .btn-primary {
+    display: block;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    font-size: 5px;
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+  .leftColText {
+    display: none;
+  }
+
+  .leftColButton .btn-primary {
+    display: block;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    font-size: 5px;
+    margin-left: 15%;
+  }
+}
+
+
+.navbar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.leftColBird {
+  width: 100%;
+  margin-top: 10%;
+  padding: 3%;
+}
+
+.leftCol {
+  width: 100%;
+  margin-top: 10%;
+  padding: 3%;
+}
+
+.leftCol:hover {
+  background-color: rgb(209, 228, 240);
+  border-radius: 20px;
+}
+
+.leftCol p {
+  font-weight: bold;
+  color: black;
+  position: static;
+  margin: auto;
+  font-size: 20px;
+  padding-left: 5%;
+}
+
+.leftCol p:hover {
+  color: #1da1f2;
+}
+
+.btn-primary {
+  width: 75%;
+  border-radius: 50px;
+  background-color: #1DA1F2;
+  margin-left: 8%;
+}

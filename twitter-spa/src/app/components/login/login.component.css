@@ -1,0 +1,126 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.row {
+  width: 100%;
+  margin: auto;
+}
+
+.leftArea {
+  background-color: #1da1f2;
+  height: 99vh;
+}
+
+.rightArea {
+  height: 99vh;
+}
+
+svg {
+  position: absolute;
+}
+
+.leftContent {
+  margin-top: 35%;
+  position: absolute;
+  z-index: 2;
+  margin-left: 35%;
+  color: white;
+  font-size: 18px;
+  line-height: 75px;
+  font-weight: bold;
+}
+
+.formInput {
+  margin-top: 3%;
+  margin-left: 35%;
+}
+
+.formInput button {
+  border-radius: 20px;
+  background-color: white;
+  color: rgb(74, 159, 212);
+  font-weight: bold;
+}
+
+.formInput button:hover {
+  background-color: #ccdde7;
+}
+
+.forgotPassword a {
+  float: right;
+  margin-right: 30%;
+  text-decoration: none;
+  color: #aab8c2;
+  font-size: 14px;
+}
+
+.forgotPassword a:hover {
+  text-decoration: underline;
+}
+
+.SignUp {
+  max-width: 500px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  padding: 5%;
+}
+
+.SignUp h3,
+h5 {
+  font-weight: bold;
+}
+
+.twitterIcon {
+  color: #1da1f2;
+}
+
+.SignUp .btn-primary {
+  border-radius: 75px;
+  background-color: #1da1f2;
+  color: white;
+  width: 90%;
+}
+
+.SignUp .btn-primary:hover {
+  background-color: #0973b4;
+}
+
+.SignUp .btn-secondary {
+  border-radius: 75px;
+  background-color: white;
+  color: #5abaf5;
+  width: 90%;
+}
+
+.SignUp .btn-secondary:hover {
+  background-color: rgb(173, 224, 253);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #e6ecf0;
+  background-color: #ffffff;
+}
+
+.footerback a {
+  color: #aab8c2;
+}
+
+.footerback ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+.footerback li {
+  display: inline;
+  line-height: 50px;
+  margin-left: 0.5%;
+  font-size: 11px;
+}

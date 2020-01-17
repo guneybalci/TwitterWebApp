@@ -1,0 +1,32 @@
+.home{
+    background-color:  rgb(252, 252, 252);;
+}
+
+.hometop{
+    background-color: white;
+    border: 1px solid rgb(211, 209, 209);
+    font-weight: bold;
+    height: 3em;
+}
+
+.hometop span{
+    font-size: 19px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;;
+}
+
+.hometop img{
+    float: right;
+}
+
+.tweet{
+    background-color: white;
+    border: 1px solid rgb(211, 209, 209);
+    height: 13em;
+    margin-top: 1%;
+}
+
+.tweetdocket{
+    border: 1px solid rgb(211, 209, 209);
+    height: 17em;
+    margin-top: 1%;
+}
