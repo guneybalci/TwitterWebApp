@@ -4,7 +4,11 @@
     <img src="/assets/img/homestar.png" class="img-responsive" alt="" />
   </div>
 
-  <div class="tweet">Buraya Tweet Atma Özellikleri Gelecek!</div>
-  <div class="tweetdocket">Buraya Gündemden Haberler Gelecek!</div>
-  <div class="tweetdocket">Buraya Gündemden Haberler Gelecek!</div>
+  <div class="tweet">
+    <img src="/assets/img/testt.jpg" class="img-responsive" alt="" />
+  </div>
+  <div *ngFor="let tweet of tweets" class="tweetdocket">
+    <div>{{ tweet.tweetDate | date :'short' }}</div>
+    <div>{{ tweet.tweetContent }}</div>
+  </div>
 </div>
