@@ -9,13 +9,13 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
   constructor(private authService:AuthService) {}
 
-  loginUser:any = {}
+  userLoginDto:any = {}
 
   ngOnInit() {}
 
   //Kullanıcı Form Alanından Giriş Yapacak.
   login(){
-    this.authService.login(this.loginUser);
+    this.authService.login(this.userLoginDto);
   }
 
   //Kullanıcı Giriş Yaptıktan Sonra Çıkış Yapacak.

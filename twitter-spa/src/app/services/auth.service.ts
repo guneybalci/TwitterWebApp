@@ -23,7 +23,7 @@ export class AuthService {
   jwtHelper: JwtHelper = new JwtHelper(); // jwt Helper methodlarına ulaşmak için tanımladık
   TOKEN_KEY = "token";
 
-  login(loginUser: UserLoginDto) {
+  login(userLoginDto: UserLoginDto) {
     // Login Action'a application/json formatında header gönderdik.
     let headers = new HttpHeaders();
 
@@ -32,13 +32,13 @@ export class AuthService {
 
     //Http Post ile API'deki login methoduna gönderme işlemi yaptık.
     this.httpClient
-      .post(this.apiUrl + "login", loginUser, { headers: headers })
+      .post(this.apiUrl + "login", userLoginDto, {responseType: 'text'})
       .subscribe(data => {
-        this.saveToken(data["tokenString"]);
-        this.userToken = data["tokenString"];
-        this.decodedToken = this.jwtHelper.decodeToken(data["tokenString"]); //Gelen Token'ı decode et.
+        this.saveToken(data);
+        this.userToken = data;
+        this.decodedToken = this.jwtHelper.decodeToken(data.toString()); //Gelen Token'ı decode et.
         this.alertifyService.success("Welcome to Twitter!");
-        this.router.navigateByUrl("./home");
+        //this.router.navigateByUrl("./home");
       });
   }
 
@@ -52,12 +52,13 @@ export class AuthService {
 
   //Login Yaparken Gelen Token'ı LocalStorage'e veritabanına kaydetmeli.
   saveToken(token) {
-    localStorage.setItem("token", token);
+    localStorage.setItem(this.TOKEN_KEY, token);
   }
 
   // Tokenı Locale Silerek kullanıcının çıkışını sağlarız
   logOut() {
     localStorage.removeItem(this.TOKEN_KEY);
+    this.alertifyService.warning("Twitter Hesabınızdan Başarıyla Çıkış Yapıldı.")
   }
 
   // Kullanıcı Sisteme Login Durumunda olup olmadığını anlamak için yazılan metod.

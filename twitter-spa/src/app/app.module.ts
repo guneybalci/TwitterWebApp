@@ -10,6 +10,7 @@ import { SidebarComponent } from "./components/home/sidebar/sidebar.component";
 import { NewsComponent } from "./components/home/news/news.component";
 import { TweetsComponent } from "./components/home/tweets/tweets.component";
 import { AlertifyService } from "./services/alertify.service";
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,9 +19,9 @@ import { AlertifyService } from "./services/alertify.service";
     LoginComponent,
     SidebarComponent,
     NewsComponent,
-    TweetsComponent
+    TweetsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule,ReactiveFormsModule],
   providers: [AlertifyService],
   bootstrap: [AppComponent]
 })

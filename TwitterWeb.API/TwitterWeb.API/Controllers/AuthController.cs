@@ -64,7 +64,7 @@ namespace TwitterWeb.API.Controllers
             var uploadResult = new ImageUploadResult();
 
 
-            //if (file.Length > 0) // dosya varsa
+            //if (file.Length > 0) // Dosya Varsa
             //{
             //    using (var stream = file.OpenReadStream())
             //    {
