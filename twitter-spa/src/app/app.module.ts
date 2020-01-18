@@ -11,6 +11,8 @@ import { NewsComponent } from "./components/home/news/news.component";
 import { TweetsComponent } from "./components/home/tweets/tweets.component";
 import { AlertifyService } from "./services/alertify.service";
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {RouterModule} from "@angular/router";
+import {appRoutes} from "./Routes/routes";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { FormsModule, ReactiveFormsModule} from "@angular/forms";
     NewsComponent,
     TweetsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule,ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule,ReactiveFormsModule,RouterModule.forRoot(appRoutes)],
   providers: [AlertifyService],
   bootstrap: [AppComponent]
 })

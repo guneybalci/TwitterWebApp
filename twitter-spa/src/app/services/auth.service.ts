@@ -38,7 +38,7 @@ export class AuthService {
         this.userToken = data;
         this.decodedToken = this.jwtHelper.decodeToken(data.toString()); //Gelen Token'ı decode et.
         this.alertifyService.success("Welcome to Twitter!");
-        //this.router.navigateByUrl("./home");
+        this.router.navigateByUrl("/home");
       });
   }
 
