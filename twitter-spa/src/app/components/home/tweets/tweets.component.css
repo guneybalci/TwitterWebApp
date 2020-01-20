@@ -20,6 +20,11 @@
     float: right;
 }
 
+.hometop a{
+    text-decoration: none;
+    color: black;
+}
+
 .tweet{
     background-color: white;
     border: 1px solid rgb(211, 209, 209);

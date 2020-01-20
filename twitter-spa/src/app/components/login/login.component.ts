@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from "src/app/services/auth.service";
 
 @Component({
   selector: "app-login",
@@ -7,24 +7,26 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-  constructor(private authService:AuthService) {}
+  constructor(private authService: AuthService) {}
 
-  userLoginDto:any = {}
+  userLoginDto: any = {};
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   //Kullanıcı Form Alanından Giriş Yapacak.
-  login(){
+  login() {
     this.authService.login(this.userLoginDto);
   }
 
   //Kullanıcı Giriş Yaptıktan Sonra Çıkış Yapacak.
-  logOut(){
+  logOut() {
     this.authService.logOut();
   }
 
   //Property(get) olarak yazılan Authentication mi? methodu.
-  get isAuthenticated(){
+  get isAuthenticated() {
     return this.authService.loggedIn();
   }
 }

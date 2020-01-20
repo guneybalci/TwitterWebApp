@@ -13,6 +13,7 @@ import { AlertifyService } from "./services/alertify.service";
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./Routes/routes";
+import { LoginGuard } from './components/login/login.guard';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import {appRoutes} from "./Routes/routes";
     TweetsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule,ReactiveFormsModule,RouterModule.forRoot(appRoutes)],
-  providers: [AlertifyService],
+  providers: [AlertifyService,LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

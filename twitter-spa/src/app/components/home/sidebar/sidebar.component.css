@@ -70,16 +70,17 @@
   border-radius: 20px;
 }
 
-.leftCol p {
+.leftCol a {
   font-weight: bold;
   color: black;
   position: static;
   margin: auto;
   font-size: 20px;
   padding-left: 5%;
+  text-decoration: none;
 }
 
-.leftCol p:hover {
+.leftCol a:hover {
   color: #1da1f2;
 }
 

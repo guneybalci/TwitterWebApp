@@ -22,4 +22,8 @@ export class AlertifyService {
   error(message: string) {
     alertify.error(message);
   }
+
+  dialog(message:string){
+    alertify.alert(message);
+  }
 }

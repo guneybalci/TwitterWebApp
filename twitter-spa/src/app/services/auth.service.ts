@@ -27,17 +27,18 @@ export class AuthService {
     // Login Action'a application/json formatında header gönderdik.
     let headers = new HttpHeaders();
 
-    // Datayı JSON formatında istedik.
+    // Datayı JSON formatında istedik. Ancak bizim projemizde  text türünde gelmelidir.
     headers = headers.append("Content-Type", "application/json");
 
     //Http Post ile API'deki login methoduna gönderme işlemi yaptık.
     this.httpClient
-      .post(this.apiUrl + "login", userLoginDto, {responseType: 'text'})
+      .post(this.apiUrl + "login", userLoginDto, { responseType: "text" })
       .subscribe(data => {
         this.saveToken(data);
         this.userToken = data;
         this.decodedToken = this.jwtHelper.decodeToken(data.toString()); //Gelen Token'ı decode et.
-        this.alertifyService.success("Welcome to Twitter!");
+        this.alertifyService.dialog("Welcome to Twitter!");
+
         this.router.navigateByUrl("/home");
       });
   }
@@ -50,7 +51,7 @@ export class AuthService {
       .subscribe(data => {});
   }
 
-  //Login Yaparken Gelen Token'ı LocalStorage'e veritabanına kaydetmeli.
+  //Login Yaparken Gelen Token'ı LocalStorage'e veritabanına kaydetmeli. LogicStorage(key:value)
   saveToken(token) {
     localStorage.setItem(this.TOKEN_KEY, token);
   }
@@ -58,7 +59,9 @@ export class AuthService {
   // Tokenı Locale Silerek kullanıcının çıkışını sağlarız
   logOut() {
     localStorage.removeItem(this.TOKEN_KEY);
-    this.alertifyService.warning("Twitter Hesabınızdan Başarıyla Çıkış Yapıldı.")
+    this.alertifyService.dialog(
+      "Twitter Hesabınızdan Başarıyla Çıkış Yapıldı."
+    );
   }
 
   // Kullanıcı Sisteme Login Durumunda olup olmadığını anlamak için yazılan metod.
