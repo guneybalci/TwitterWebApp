@@ -90,32 +90,32 @@
   </div>
   <!--Aşağıdan itibaren-->
   <!--Tweet Mind-->
-  <div *ngFor="let tweet of tweets" class="tweetdocket container-fluid">
+  <div *ngFor="let tweet of usertweetinfodto" class="tweetdocket container-fluid">
     <div class="row">
       <div class="tContentProfPic col-2">
         <img src="/assets/img/tweetprofile.png" class="img-fluid" alt="" />
       </div>
       <div class="tContent col-10">
         <div class="tName col">
-          Ad Soyad {{ tweet.tweetDate | date: "fullDate" }}
+         <strong>{{tweet.userName}} {{tweet.userSurname}}</strong> @{{tweet.loginName}} {{ tweet.tweetDate | date: "shortTime" }}
         </div>
         <div class="tTweet col">
-          <div>{{ tweet.tweetContent }}</div>
+        <div>{{ tweet.tweetContent }}</div>
         </div>
-        <div class="tPic col">Resim</div>
+        <div class="tPic col">{{tweet.userImageUrl}}</div>
         <div class="tRt col">
           <div class="row">
             <div class="tweetIco tweetChat col 4">
-              <i class="fa fa-comment"></i>
+              <i class="far fa-comment"></i>
             </div>
             <div class="tweetIco tweetReTweet col 4">
-              <i class="fa fa-retweet"></i>
+              <i class="fas fa-retweet"></i>
             </div>
             <div class="tweetIco tweetLike col 4">
-              <i class="fa fa-heart"></i>
+              <i class="far fa-heart"></i>
             </div>
             <div class="tweetIco tweetDm col 4">
-              <i class="fa fa-download"></i>
+              <i class="fas fa-external-link-alt"></i>
             </div>
           </div>
         </div>

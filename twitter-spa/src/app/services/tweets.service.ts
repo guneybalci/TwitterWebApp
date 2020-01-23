@@ -4,6 +4,7 @@ import { Observable, throwError } from "rxjs";
 import { Tweet } from "../models/tweet";
 import { TweetForAdd } from "../dto/tweetForAdd";
 import { tap, catchError } from "rxjs/operators";
+import { UserTweetInfoDto } from '../dto/UserTweetInfoDto';
 
 @Injectable({
   providedIn: "root"
@@ -14,8 +15,9 @@ export class TweetsService {
 
   path = "http://localhost:53842/api/";
 
-  getTweets(): Observable<Tweet[]> {
-    return this.httpClient.get<Tweet[]>(this.path + "tweets");
+  //Tüm Tweetleri Getirme İşlemi.
+  getTweets(): Observable<UserTweetInfoDto[]> {
+    return this.httpClient.get<UserTweetInfoDto[]>(this.path + "tweets");
   }
 
   //Yeni Tweet Atma İşlemi:

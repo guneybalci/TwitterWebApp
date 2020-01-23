@@ -4,6 +4,7 @@ import { TweetsService } from "src/app/services/tweets.service";
 import { TweetForAdd } from "src/app/dto/tweetForAdd";
 import { NgForm } from "@angular/forms";
 import { AuthService } from 'src/app/services/auth.service';
+import { UserTweetInfoDto } from 'src/app/dto/UserTweetInfoDto';
 
 @Component({
   selector: "app-tweets",
@@ -15,11 +16,12 @@ export class TweetsComponent implements OnInit {
   constructor(private tweetsService: TweetsService, private authService:AuthService) {}
 
   tweets: Tweet[] = [];
+  usertweetinfodto:UserTweetInfoDto[] = [];
   addTweet: TweetForAdd = new TweetForAdd();
 
   ngOnInit() {
     this.tweetsService.getTweets().subscribe(data => {
-      this.tweets = data;
+      this.usertweetinfodto = data;
     });
   }
 

@@ -98,13 +98,14 @@
 }
 
 .tContentProfPic {
+  margin-top: 1%;
   display: block;
   float: left;
   width: 100%;
 }
 
 .tContent {
-
+  margin-top: 1%;
   display: block;
   float: right;
   width: 100%;
@@ -150,34 +151,10 @@
 
 .tweetIco i {
   font-size: 20px;
-  color: rgb(187, 188, 190);
+  color:#7D8C99;
 }
 
 .tweetChat i:hover {
-  border-radius: 40%;
-  background-color: rgb(192, 219, 236);
-  color: rgb(38, 133, 192);
-}
-
-.fa-download i:hover {
-  border-radius: 40%;
-  background-color: rgb(192, 219, 236);
-  color: rgb(38, 133, 192);
-}
-
-.fa-retweet:hover {
-  border-radius: 40%;
-  background-color: rgb(139, 218, 146);
-  color: rgb(39, 161, 49);
-}
-
-.fa-heart:hover {
-  border-radius: 40%;
-  background-color: rgb(235, 152, 152);
-  color: rgb(184, 40, 40);
-}
-
-.fa-download:hover {
   border-radius: 40%;
   background-color: rgb(192, 219, 236);
   color: rgb(38, 133, 192);
