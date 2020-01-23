@@ -1,92 +1,64 @@
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .leftColText {
-    display: none;
-  }
-
-  .leftColButton .btn-primary {
-    display: block;
-    height: 37px;
-    width: 37px;
-    border-radius: 50%;
-    font-size: 5px;
-    margin-left: 9%;
+/* Small devices (landscape phones, 576px ve yukarısı) */
+@media (max-width: 576px) {
+  .leftCol span {
+    font-size: 0px;
   }
 }
 
-@media only screen and (max-width: 992px) {
-  .leftColText {
-    display: none;
-  }
-
-  .leftColButton .btn-primary {
-    display: block;
-    height: 37px;
-    width: 37px;
-    border-radius: 50%;
-    font-size: 5px;
-    margin-left: 10%;
+/* Medium devices (tablets, 768px ve yukarısı) */
+@media (max-width: 768px) {
+  .leftCol span {
+    font-size: 0px;
   }
 }
 
-@media only screen and (max-width: 766px) {
-  .leftColText {
-    display: none;
+/* Large devices (desktops, 992px ve yukarısı) */
+@media (max-width: 992px) {
+  .leftCol span {
+    font-size: 0px;
   }
-
-  .leftColButton .btn-primary {
-    display: block;
-    height: 37px;
-    width: 37px;
-    border-radius: 50%;
-    font-size: 5px;
-    margin-left: 15%;
+  .leftButton{
+    width: 50%;
   }
 }
 
 
-.navbar {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  cursor: pointer;
+/* Extra large devices (large desktops, 1200px ve yukarısı) */
+@media (max-width: 1200px) {
 }
 
-.leftColBird {
-  width: 100%;
-  margin-top: 10%;
-  padding: 3%;
+.container {
+  display: inline-block;
+  margin: 1%;
 }
 
 .leftCol {
-  width: 100%;
-  margin-top: 10%;
   padding: 3%;
 }
 
-.leftCol:hover {
-  background-color: rgb(209, 228, 240);
-  border-radius: 20px;
+.leftCol a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
-.leftCol a {
+.leftCol span {
   font-weight: bold;
-  color: black;
-  position: static;
-  margin: auto;
-  font-size: 20px;
-  padding-left: 5%;
-  text-decoration: none;
+  position: relative;
 }
 
 .leftCol a:hover {
-  color: #1da1f2;
+  background-color: rgb(231, 239, 243);
+  border-radius: 20px;
+  color: #31a9f3;
 }
 
-.btn-primary {
-  width: 75%;
-  border-radius: 50px;
+.btn-primary{
   background-color: #1DA1F2;
-  margin-left: 8%;
+  width: 75%;
+  border-radius: 20px;
+}
+
+.leftButton{
+  padding: 3%;
 }

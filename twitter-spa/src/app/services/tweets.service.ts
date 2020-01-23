@@ -1,7 +1,9 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import {HttpClient,HttpErrorResponse,HttpHeaders} from "@angular/common/http";
+import { Observable, throwError } from "rxjs";
 import { Tweet } from "../models/tweet";
+import { TweetForAdd } from "../dto/tweetForAdd";
+import { tap, catchError } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
@@ -14,5 +16,37 @@ export class TweetsService {
 
   getTweets(): Observable<Tweet[]> {
     return this.httpClient.get<Tweet[]>(this.path + "tweets");
+  }
+
+  //Yeni Tweet Atma İşlemi:
+  addTweet(addTweet: TweetForAdd): Observable<Tweet> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json",
+        Authorization: "Token"
+      })
+    };
+    return this.httpClient
+      .post<Tweet>(this.path +"tweets/add", addTweet, httpOptions)
+      .pipe(
+        tap(data => console.log(JSON.stringify(data))),
+        catchError(this.handleError)
+      );
+  }
+
+  //Tweet Silme İşlemi
+  // delTweet(id: number): Observable<TweetForAdd> {
+  //   console.log(this.path + "/" + id);
+  //   this.path.delete<TweetForAdd>(this.path + "/" + id);
+  // }
+
+  handleError(err: HttpErrorResponse) {
+    let errorMessage = "";
+    if (err.error instanceof ErrorEvent) {
+      errorMessage = "Bir hata oluştu" + err.error.message;
+    } else {
+      errorMessage = "Sistemsel bir hata";
+    }
+    return throwError(errorMessage);
   }
 }

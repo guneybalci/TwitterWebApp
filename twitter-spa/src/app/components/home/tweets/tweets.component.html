@@ -1,12 +1,125 @@
 <div class="home">
+  <!--Topic-->
   <div class="hometop">
     <span><a href="#">Home</a> </span>
     <img src="/assets/img/homestar.png" class="img-responsive" alt="" />
   </div>
 
-  <div class="tweet"></div>
-  <div *ngFor="let tweet of tweets" class="tweetdocket">
-    <div>{{ tweet.tweetDate | date: "short" }}</div>
-    <div>{{ tweet.tweetContent }}</div>
+  <!--Tweet Yourselft-->
+  <div class="tweet container">
+    <form #tweetAddForm="ngForm" (ngSubmit)="add(tweetAddForm)">
+      <div class="row">
+        <div class="col-2">
+          <span
+            ><img
+              src="/assets/img/tweetprofile.png"
+              class="img-responsive"
+              alt=""
+          /></span>
+        </div>
+        <div class="TweetProf col-10">
+          <div class="form-group">
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="5"
+              placeholder="What's happening?"
+              maxlength="280"
+              #name="ngModel"
+              [(ngModel)]="addTweet.tweetContent"
+              [ngModelOptions]="{standalone: true}"
+              required
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="tweeticons row">
+        <div class="tweetPicLeft col ">
+          <span
+            ><img
+              src="/assets/img/tweetpicture.png"
+              class="img-responsive"
+              alt=""
+          /></span>
+        </div>
+        <div class="tweetPicLeft col">
+          <span
+            ><img src="/assets/img/tweetgif.png" class="img-responsive" alt=""
+          /></span>
+        </div>
+        <div class="tweetPicLeft col">
+          <span
+            ><img src="/assets/img/tweetgraph.png" class="img-responsive" alt=""
+          /></span>
+        </div>
+        <div class="tweetPicLeft col">
+          <span
+            ><img src="/assets/img/tweetsmile.png" class="img-responsive" alt=""
+          /></span>
+        </div>
+        <div class="tweetPicRight col">
+          <span
+            ><img
+              src="/assets/img/tweetcircle.png"
+              class="img-responsive"
+              alt=""
+          /></span>
+        </div>
+        <div class="tweetPicRight col">
+          <span
+            ><img src="/assets/img/tweetline.png" class="img-responsive" alt=""
+          /></span>
+        </div>
+        <div class="tweetPicRight col">
+          <span
+            ><img src="/assets/img/tweetplus.png" class="img-responsive" alt=""
+          /></span>
+        </div>
+        <div class="tweetPicRight col">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="tweetAddForm.invalid"
+          >
+            Tweet
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!--Aşağıdan itibaren-->
+  <!--Tweet Mind-->
+  <div *ngFor="let tweet of tweets" class="tweetdocket container-fluid">
+    <div class="row">
+      <div class="tContentProfPic col-2">
+        <img src="/assets/img/tweetprofile.png" class="img-fluid" alt="" />
+      </div>
+      <div class="tContent col-10">
+        <div class="tName col">
+          Ad Soyad {{ tweet.tweetDate | date: "fullDate" }}
+        </div>
+        <div class="tTweet col">
+          <div>{{ tweet.tweetContent }}</div>
+        </div>
+        <div class="tPic col">Resim</div>
+        <div class="tRt col">
+          <div class="row">
+            <div class="tweetIco tweetChat col 4">
+              <i class="fa fa-comment"></i>
+            </div>
+            <div class="tweetIco tweetReTweet col 4">
+              <i class="fa fa-retweet"></i>
+            </div>
+            <div class="tweetIco tweetLike col 4">
+              <i class="fa fa-heart"></i>
+            </div>
+            <div class="tweetIco tweetDm col 4">
+              <i class="fa fa-download"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

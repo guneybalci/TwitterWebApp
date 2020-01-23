@@ -34,17 +34,29 @@ namespace TwitterWeb.API.Controllers
         {
             // Repositorydeki metodu çağırıp  dto için mapping yaptık.
             // Çünkü kullanıcının bazı alanları görmemesi gerekir.
-            var tweets = _appRepository.GetTweets().Select(t =>
-            new tweetForListDto
-            {
-                tweetId = t.tweetId,
-                tweetContent = t.tweetContent,
-                tweetDate = t.tweetDate,
-                userIdFk = t.userIdFk
-            }).ToList();
+            var tweets = _appRepository.GetTweets().ToList();
 
-            return Ok(tweets);
+            List<UserTweetInfoDto> _userTweetInfoDtos = new List<UserTweetInfoDto>();
+
+            foreach (var tweet in tweets)
+            {
+                var user = _appRepository.GetUser(tweet.userIdFk);
+                UserTweetInfoDto userTweetInfo = new UserTweetInfoDto()
+                {
+                    userId = user.userId,
+                    loginName = user.loginName,
+                    userName = user.userName,
+                    userSurname = user.userSurname,
+                    userImageUrl = user.imageUrl,
+                    tweetContent = tweet.tweetContent,
+                    tweetDate = tweet.tweetDate,
+                    tweetId = tweet.tweetId
+                };
+                _userTweetInfoDtos.Add(userTweetInfo);
+            }
+            return Ok(_userTweetInfoDtos);
         }
+
 
         [HttpGet]
         [Route("detail")]
@@ -89,13 +101,16 @@ namespace TwitterWeb.API.Controllers
 
         [HttpPost]
         [Route("add")] //api/Tweets/add 
-        public ActionResult AddTweet([FromBody]Tweet tweet)
+        public ActionResult AddTweet([FromBody]tweetForAdd _tweetForAdd)
         {
             //Patterndeki metodlara entity gönderdik
-            tweet.tweetDate = DateTime.Now;
-            _appRepository.Add(tweet);
+            Tweet _tweet = new Tweet();
+            _tweet.tweetContent = _tweetForAdd.tweetContent;
+            _tweet.tweetDate = DateTime.Now;
+            _tweet.userIdFk = _tweetForAdd.userIdFK;
+            _appRepository.Add(_tweet);
             _appRepository.SaveAll();
-            return Ok(tweet);
+            return Ok(_tweet);
         }
     }
 }

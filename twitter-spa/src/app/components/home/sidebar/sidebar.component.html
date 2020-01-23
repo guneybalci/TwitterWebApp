@@ -1,68 +1,40 @@
-<div class="navbar">
-  <div class="leftColBird row ">
-    <img
-      src="/assets/img/twitter-icon.png"
-      class="deneme img-responsive"
-      alt=""
-    />
+<div class="container">
+  <div class="leftCol row justify-content-start">
+    <a href="#"><span><img src="/assets/img/twitter-icon.png" class="img-responsive" alt=""/></span></a>
   </div>
 
-  <div class="leftCol row">
-    <img src="/assets/img/twitter-home.png" class="img-responsive" alt="" />
-    <div class="leftColText">
-      <a >Home</a>
-    </div>
+  <div class="leftCol mt-3 row justify-content-start">
+    <a href="#"> <span><img src="/assets/img/twitter-home.png" class="img-responsive" alt=""/> Home</span></a>
   </div>
 
-  <div class="leftCol row">
-    <img src="/assets/img/twitter-hashtag.png" class="img-responsive" alt="" />
-    <div class="leftColText">
-      <a >Explore</a>
-    </div>
+  <div class="leftCol row mt-3 justify-content-start ">
+    <a href="#"><span><img src="/assets/img/twitter-hashtag.png" class="img-responsive" alt=""/> Explore</span></a>
   </div>
 
-  <div class="leftCol row ">
-    <img src="/assets/img/twitter-bell.png" class="img-responsive" alt="" />
-    <div class="leftColText">
-      <a >Notifications</a>
-    </div>
+  <div class="leftCol row mt-3 justify-content-start">
+    <a href="#"> <span><img src="/assets/img/twitter-bell.png" class="img-responsive" alt=""/> Notifications</span></a>
   </div>
 
-  <div class="leftCol row">
-    <img src="/assets/img/twitter-message.png" class="img-responsive" alt="" />
-    <div class="leftColText">
-      <a >Messages</a>
-    </div>
+  <div class="leftCol row mt-3 justify-content-start">
+    <a href="#"><span><img src="/assets/img/twitter-message.png" class="img-responsive" alt=""/> Messages</span></a>
   </div>
 
-  <div class="leftCol row ">
-    <img src="/assets/img/twitter-bookmark.png" class="img-responsive" alt="" />
-    <div class="leftColText">
-      <a >Bookmarks</a>
-    </div>
+  <div class="leftCol row mt-3 justify-content-start">
+    <a href="#"> <span><img src="/assets/img/twitter-bookmark.png" class="img-responsive" alt=""/> Bookmarks</span></a>
   </div>
 
-  <div class="leftCol row">
-    <img src="/assets/img/twitter-lists.png" class="img-responsive" alt="" />
-    <div class="leftColText">
-      <a >Lists</a>
-    </div>
+  <div class="leftCol row mt-3 justify-content-start">
+    <a href="#"> <span><img src="/assets/img/twitter-lists.png" class="img-responsive" alt=""/> Lists</span></a>
   </div>
 
-  <div class="leftCol row">
-    <img src="/assets/img/twitter-profile.png" class="img-responsive" alt="" />
-    <div class="leftColText">
-      <a >Profile</a>
-    </div>
+  <div class="leftCol row mt-3 justify-content-start">
+    <a href="#"> <span><img src="/assets/img/twitter-profile.png" class="img-responsive" alt=""/> Profile</span></a>
   </div>
 
-  <div class="leftCol row">
-    <img src="/assets/img/twitter-more.png" class="img-responsive" alt="" />
-    <div class="leftColText">
-      <a *ngIf="isAuthenticated" (click)="logOut()">LogOut</a>
-    </div>
+  <div class="leftCol row mt-3 justify-content-start">
+    <a *ngIf="isAuthenticated" (click)="logOut()"> <span><img src="/assets/img/twitter-more.png" class="img-responsive" alt=""/> Log out</span></a>
   </div>
-</div>
-<div class="leftColButton">
-  <a class="btn btn-primary" href="#" role="button" target="_blank">Tweet</a>
+
+  <div class="leftButton row mt-3 justify-content-start">
+  <button class="btn btn-primary" type="submit">Tweet</button></div>
 </div>
